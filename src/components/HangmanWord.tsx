@@ -1,12 +1,14 @@
 import styles from './HangmanWord.module.css';
-type Props = {};
 
-const HangmanWord = (props: Props) => {
-  const word = 'test';
-  const guessedLetters = ['', 'e'];
+type HangmanWordProps = {
+  guessedLetters: string[];
+  wordToGuess: string;
+};
+
+const HangmanWord = ({ guessedLetters, wordToGuess }: HangmanWordProps) => {
   return (
     <div className={styles.container}>
-      {word.split('').map((letter, index) => {
+      {wordToGuess.split('').map((letter, index) => {
         return (
           <span className={styles.letter} key={index}>
             <span

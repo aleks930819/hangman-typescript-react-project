@@ -79,17 +79,16 @@ const RIGHT_LEG = (
   ></div>
 );
 
-type Props = {};
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
 
-const HangmanDrawing = (props: Props) => {
+type HangmanDrawingProps = {
+  numberOfGuesses: number;
+};
+
+const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
   return (
     <div className={styles.container}>
-      {HEAD}
-      {BODY}
-      {RIGHT_ARM}
-      {LEFT_ARM}
-      {RIGHT_LEG}
-      {LEFT_LEG}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
       <div className={styles['line-horizontal-2']}></div>
       <div className={styles['line-veritcal-2']}></div>
       <div className={styles['line-horizontal']}></div>

@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+}
+
+.line-horizontal {
+    height: 400px;
+    width: 10px;
+    background-color: #000;
+    margin-left: 120px;
+}
+
+.line-horizontal-2 {
+    height: 50px;
+    width: 10px;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.line-veritcal {
+    height: 10px;
+    width: 250px;
+    background-color: #000;
+}
+
+.line-veritcal-2 {
+    height: 10px;
+    width: 200px;
+    margin-left: 120px;
+    background-color: #000;
+}
+
+.head {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border-radius: 10px solid black;
+    position: absolute;
+    top: 50px;
+    right: -30px;
+}
